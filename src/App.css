@@ -50,10 +50,6 @@ em {
   flex: 3;
 }
 
-.searchbox {
-  margin-bottom: 2rem;
-}
-
 .pagination {
   margin: 2rem auto;
   text-align: center;
