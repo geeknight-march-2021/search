@@ -6,7 +6,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",

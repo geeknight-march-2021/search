@@ -3,11 +3,7 @@ import algoliasearch from 'algoliasearch/lite';
 import {
   InstantSearch,
   Pagination,
-  Highlight,
 } from 'react-instantsearch-dom';
-import styled from 'styled-components'
-
-import PropTypes from 'prop-types';
 import './App.css';
 import SearchBox from './SearchBox';
 import Hits from './Hits';
