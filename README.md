@@ -29,7 +29,8 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-> Run ` yarn analyze` to get analysis of the final bundle
+> Run ` yarn analyze` to get analysis of the final bundle which uses source-map-explorer
+> To use webpack-bundle-analyser use `node scripts/analyse.js`
 
 ### `yarn eject`
 
