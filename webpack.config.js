@@ -19,9 +19,9 @@ const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeM
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const paths = require('./paths');
-const modules = require('./modules');
-const getClientEnvironment = require('./env');
+const paths = require('./config/paths');
+const modules = require('./config/modules');
+const getClientEnvironment = require('./config/env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
@@ -555,6 +555,11 @@ module.exports = function (webpackEnv) {
       ],
     },
     plugins: [
+      new webpack.DllReferencePlugin({
+        context: __dirname,
+        manifest: require('../commons/build/commons-manifest.json'),
+        name: 'commons' // this has to match output.library in commons/webpack.config.js
+      }),
       new webpack.optimize.LimitChunkCountPlugin({
         maxChunks: 1,
       }),
