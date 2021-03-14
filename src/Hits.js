@@ -21,7 +21,7 @@ const CustomHighlight = connectHighlight(({ highlight, attribute, hit }) => {
   return (
     <>
       {parsedHit.map(
-        part => (part.isHighlighted ? <mark>{part.value}</mark> : part.value)
+        (part, i) => (part.isHighlighted ? <mark key={i}>{part.value}</mark> : <React.Fragment key={i}>{part.value}</React.Fragment>)
       )}
     </>
   );

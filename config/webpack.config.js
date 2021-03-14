@@ -556,8 +556,7 @@ module.exports = function (webpackEnv) {
     },
     plugins: [
       new webpack.DllReferencePlugin({
-        context: path.resolve(__dirname, ".."),
-        manifest: require('../../commons/build/commons-manifest.json'),
+        manifest: paths.dllManifestPath,
         name: 'commons' // this has to match output.library in commons/webpack.config.js
       }),
       new webpack.optimize.LimitChunkCountPlugin({

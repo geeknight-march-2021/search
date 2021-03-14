@@ -13,7 +13,7 @@ const SearchBox = ({
   return(
     <TextField
       label="Search"
-      size="large"
+      size="medium"
       fullWidth
       margin="normal"
       value={currentRefinement}
